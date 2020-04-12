@@ -16,4 +16,18 @@ public class MainFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
+
+    /*@Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        final MaterialCardView materialCardView =view.findViewById(R.id.card_main_text);
+        materialCardView.setChecked(true);
+        materialCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                materialCardView.setChecked(!materialCardView.isChecked());
+            }
+        });
+    }*/
 }

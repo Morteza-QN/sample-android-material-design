@@ -31,6 +31,10 @@
 
         <include layout="@layout/item_text" />
 
+        <include layout="@layout/item_text" />
+
+        <include layout="@layout/item_text" />
+
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
