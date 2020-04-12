@@ -15,7 +15,7 @@
             android:id="@+id/toolbar_main_activity"
             app:titleTextColor="@android:color/white"
             android:layout_width="match_parent"
-            app:layout_scrollFlags="scroll"
+            app:layout_scrollFlags="scroll|enterAlways"
             android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
 
