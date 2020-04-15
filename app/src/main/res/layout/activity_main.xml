@@ -7,17 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_main_activity"
-            app:titleTextColor="@android:color/white"
-            android:layout_width="match_parent"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.appbar.AppBarLayout>
 
     <fragment
         android:id="@+id/frame_main_fragmentContainer"
