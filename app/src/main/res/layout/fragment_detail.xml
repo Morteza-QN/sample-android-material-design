@@ -8,6 +8,7 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -73,4 +74,23 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:layout_anchor="@id/appbar_detail"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_add_white_24dp"
+        app:useCompatPadding="true" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#212121"
+        android:text="@string/extended_fab"
+        app:icon="@drawable/ic_layers_24dp" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
