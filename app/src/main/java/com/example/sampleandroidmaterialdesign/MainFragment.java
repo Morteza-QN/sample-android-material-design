@@ -29,28 +29,26 @@ public class MainFragment extends Fragment {
         Toolbar           toolbar           = view.findViewById(R.id.tb_main);
         AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
         appCompatActivity.setSupportActionBar(toolbar);
+        //set toolbar in fragment
 
         final MaterialCardView materialCardView = view.findViewById(R.id.card_main_text);
         materialCardView.setChecked(true);
         materialCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransaction;
-                if (getFragmentManager() != null) {
-                    fragmentTransaction = getFragmentManager().beginTransaction();
-                    fragmentTransaction.add(R.id.frame_main_fragmentContainer, new DetailFragment());
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
-                }
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.add(R.id.frame_main_fragmentContainer, new DetailFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                //ocClickListener for cardView
             }
         });
     }
 
-
     /*@Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        //checkable cardView
         final MaterialCardView materialCardView =view.findViewById(R.id.card_main_text);
         materialCardView.setChecked(true);
         materialCardView.setOnClickListener(new View.OnClickListener() {

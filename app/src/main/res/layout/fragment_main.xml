@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:liftOnScroll="true">
+        <!--liftOnScroll="true" force collapsing-->
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tb_main"
@@ -16,6 +17,7 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways"
             app:titleTextColor="@android:color/white" />
+        <!--scrollFlags action when scrolling-->
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -54,7 +56,6 @@
             <include layout="@layout/item_text" />
 
             <include layout="@layout/item_text" />
-
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

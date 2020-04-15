@@ -18,6 +18,7 @@
             android:theme="@style/Theme.MaterialComponents"
             app:contentScrim="@color/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!--set theme for change color  item toolbar (text,btn)-->
 
             <ImageView
                 android:id="@+id/im_detail_appbar"
@@ -27,12 +28,14 @@
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/image_top"
                 app:layout_collapseMode="parallax" />
+            <!--set adjustViewBounds="true" for scale img -->
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/tb_detail"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 app:layout_collapseMode="pin" />
+            <!-- bug layout_height force set value if set wrap_content toolbar title hide -->
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
