@@ -3,7 +3,6 @@ package com.example.sampleandroidmaterialdesign;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +11,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar_main_activity));
+        //        setSupportActionBar((Toolbar) findViewById(R.id.tb_main));
     }
 }

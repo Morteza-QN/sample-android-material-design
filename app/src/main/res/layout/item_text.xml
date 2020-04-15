@@ -9,6 +9,8 @@
     android:layout_marginTop="6dp"
     android:layout_marginEnd="12dp"
     android:layout_marginBottom="6dp"
+    android:clickable="true"
+    android:orientation="vertical"
     app:cardCornerRadius="0dp"
     app:cardElevation="2dp"
     app:contentPadding="16dp"
@@ -17,7 +19,6 @@
     <!--    app:strokeColor="@color/colorPrimary"-->
     <!--    app:rippleColor="@color/colorPrimary"-->
     <!--    android:checkable="false"-->
-    <!--    android:clickable="true"-->
     <!--    app:checkedIconTint="@color/colorAccent"-->
 
     <LinearLayout
