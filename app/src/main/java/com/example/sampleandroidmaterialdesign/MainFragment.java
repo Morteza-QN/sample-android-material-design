@@ -1,10 +1,10 @@
 package com.example.sampleandroidmaterialdesign;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,8 +15,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainFragment extends Fragment {
+    private static final String TAG = "MainFragment";
 
     @Nullable
     @Override
@@ -50,7 +52,13 @@ public class MainFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "fab clocked", Toast.LENGTH_SHORT).show();
+                Snackbar.make(getView(), "Material Design Snackbar", Snackbar.LENGTH_INDEFINITE)
+                        .setAction("retry", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Log.i(TAG, "onClick: snackbar");
+                            }
+                        }).show();
             }
         });
     }
