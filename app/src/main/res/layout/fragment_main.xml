@@ -1,74 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLayout_main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:liftOnScroll="true">
-        <!--liftOnScroll="true" force collapsing-->
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/tb_main"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:titleTextColor="@android:color/white" />
-        <!--scrollFlags action when scrolling-->
+            app:liftOnScroll="true">
+            <!--liftOnScroll="true" force collapsing-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tb_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleTextColor="@android:color/white" />
+            <!--scrollFlags action when scrolling-->
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <include layout="@layout/item_text" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-            <include layout="@layout/item_text" />
+                <include layout="@layout/item_text" />
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+                <include layout="@layout/item_text" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_main_fragment"
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_main_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="24dp"
+
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_layers_24dp"
+            />
+        <!--for used srcCompat should added
+            vectorDrawables.useSupportLibrary = true in gradle    -->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView_main"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="24dp"
-        app:fabSize="normal"
-        app:srcCompat="@drawable/ic_layers_24dp"
-        />
-    <!--for used srcCompat should added
-        vectorDrawables.useSupportLibrary = true in gradle    -->
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_view_header"
+        app:menu="@menu/menu_main" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
