@@ -7,6 +7,8 @@
     <string name="btn_navigation_recent">recent</string>
     <string name="btn_navigation_home">Home</string>
     <string name="btn_navigation_nearby">Nearby</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
 
 
 </resources>
